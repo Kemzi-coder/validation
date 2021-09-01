@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '~normalize.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Roboto';
+  font-weight: 400;
+  background: #F1F6F9;
+}
+
+.form {
+  background: #fff;
+  padding: 30px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  &__title {
+    margin: 0 0 20px 0;
+    position: relative;
+    padding-bottom: 7px;
+    font-size: 26px;
+    color: darken(#fff, 50%);
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: darken(#fff, 50%);
+    }
+  }
+
+
+  &__input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid darken(#fff, 30%);
+    border-radius: 5px;
+    color: #000;
+
+    &.valid {
+      border-bottom-color: limegreen;
+    }
+
+    &.invalid {
+      border-bottom-color: red;
+    }
+
+    &::placeholder {
+      color: rgba(#000, .5);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &:focus {
+      border-color: darken(#fff, 60%);
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: #F05454;
+    margin-bottom: 5px;
+  }
+
+  &__item {
+    min-width: 300px;
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+    background: #F1F6F9;
+    cursor: pointer;
+  }
+}
+
